@@ -63,6 +63,9 @@
         .place h2 {
             margin: 0 0 10px; 
         }
+        .place h4 {
+            margin: 0 0 10px; 
+        }
 
         pre {
             padding: 10px;
@@ -119,12 +122,13 @@
             color: #f4a261;
         }
         .ex {
-    display: block;
-    flex-wrap: wrap;
+            display: block;
+
     gap: 20px;
     justify-content: center;
     padding: 20px;
     align-items: center;
+    
 }
 .ex-item {
     display:flex;
@@ -143,6 +147,10 @@
     width: 50%;
     margin: auto;
     padding: auto;
+    flex-basis: 100%;
+    
+
+
 
 }
 .ex-item:hover {
@@ -157,10 +165,15 @@
     padding: 0;
 }
 .ex .ex-item p {
-    padding: 15px;
-    font-size: 18px;
+    padding-top: 15;
+    padding-bottom: 15;
+    padding-left: auto;
+    padding-right: auto;
+    font-size: clamp(10px, 1px, 25px);
     color: #333;
-    margin: 0;
+    margin: auto;
+    font-weight: bolder;
+
 }
 header nav ul li{
     margin:auto;
@@ -169,8 +182,12 @@ header nav ul li a{
  font-size: xx-large;
 }
 .ex-item{
-    float:left;
+    float:inline-start;
+
+
 }
+
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -184,6 +201,9 @@ header nav ul li a{
             
             nav ul li { margin: 10px 0;
         }
+            .ex-item p{
+                font-size: xx-small;
+            }
         }
     </style>
 </head>
@@ -291,15 +311,17 @@ header nav ul li a{
         </div>
     </section>
                         <section id="6">
-        <div class="place">
+        <section class="place">
             <h2> المناطق الأثرية</h2>
-            <img style="margin: 1%; padding: 1%;height: 175;width: 250;" src="12.jpg" ><img style="margin: 1%; padding: 1%;height: 175;width: 250;" src="13.jpg" >
-            <pre><b>مقبرة كوم الشقافة </b>
-
+            
+            <pre><h4>مقبرة كوم الشقافة </h4>
+            </pre><img src="12.jpg" ><pre> 
 يرجع تاريخها الى القرن الثانى الميلادى ، وتعتبر الوحيدة من نوعها فى العالم من حيث التصميم والنقوش نظرا لامتزاج الزخرفة المصرية واليونانية والرومانية  و  المقبرة ذات أربع طبقات، وكان لها طبقة فوق الأرض اندثرت مع الزمن، أما السلم الحلزوني فيدور حول بئر أسطوانية محفورة في الصخر قطرها 6 م   ويصل عمقها   إلى 10 أمتار، والسلم مبني من كتل حجرية مربعة، شُكلت فيها نوافذ مستديرة من أعلى تعتبر الواجهة، أما المدخل فعبارة عن مكان صغير مغطى بقبو عند نهاية اللفة الثالثة للسلم، على جانبيه فجوتان متساويتان أشبه بالمحراب.
 
-<b>جبانة الشاطبي</b>
-
+<h4>جبانة الشاطبي</h4>
+</pre>
+<img src="13_cleanup.jpg" >
+<pre>
  هي أقدم مقابر الإسكندرية، وأقدم مواقع الآثار في الإسكندرية، حيث شيدت عام 332 ق.م ،ويرجع تاريخها للعصر الهلنستي وتتزامن مع تاريخ إنشاء مدينة الإسكندرية بعد قدوم الإسكندر وقراره بإنشاء المدينة، وتولى بطليموس الأول حكم مصر وقرر أن يتخذ من هذه المدينة عاصمة لمصر، وتم بناء الإسكندرية في ذلك الوقت، واستمرت الإسكندرية 1000 عام عاصمة لمصر في ظل حكم البطالمة والرومان من بعدهم، وهذه المقبرة أول مقبرة تنحت لدفن الجيل الأول من سكان الاسكندرية، ممن ماتو في وقت بناء المدينة.</pre>
 
             </div>
@@ -320,19 +342,20 @@ header nav ul li a{
     </div>
     </section>
     <section id="11">
-        <div class="ex">
+        <section class="ex">
             <h2>معرض الصور</h2>
-
+                <section>
                 <div class="ex-item">
                     <img src="14.jpg" alt="">
                     <p>البحيرات الجديدة بالمنتزة</p>
                 </div>
-
-
+                </section>
+                <section>
                 <div class="ex-item">
                     <img src="15.jpg" alt="">
                     <p>القسم الفرعونى بمتحف الاثار بمكتبة الاسكندرية</p>
                 </div>
+        </section>
           <section>
                 <div class="ex-item">
                     <img src="16.jpg" alt="">
@@ -363,15 +386,10 @@ header nav ul li a{
                     <img src="21.jpg" alt="">
                     <p>حديقة انطونيادس</p>
                 </div>
-            </section>            <section>
-                <div class="ex-item">
-                    <img src="22.jpg" alt="">
-                    <p>شواطئ الاسكندرية</p>
-                </div>
-            </section>            <section>
+            </section>           <section>
                 <div class="ex-item">
                     <img src="23.jpg" alt="">
-                    <p>فتحات الجبانة القديمة</p>
+                    <p>فتحات جبانة الشاطبي القديمة</p>
                 </div>
             </section>            <section>
                 <div class="ex-item">
@@ -383,16 +401,18 @@ header nav ul li a{
                     <img src="25.jpg" alt="">
                     <p>فيل مرصع بالاحجار الكريمة متحف المجوهرات</p>
                 </div>
+                </section><section>
                 <div class="ex-item">
                     <img src="26.jpg" alt="">
                     <p>متحف الاثار بمكتبة الاسكندرية</p>
                 </div>
-
-
+                </section>
+<section>
                 <div class="ex-item">
                     <img src="27.jpg" alt="">
                     <p>متحف الاسماك المحنطة بالقلعة</p>
                 </div>
+            </section>
           <section>
                 <div class="ex-item">
                     <img src="28.jpg" alt="">
@@ -434,10 +454,18 @@ header nav ul li a{
                     <p>مقتنيات متحف الاسماك المحنطة</p>
                 </div>
             </section>
+
             <section>
                 <div class="ex-item">
-                    <img src="36.jpg" alt="">
-                    <p>ملك الغابة بحديقة حيوان الاسكندرية</p>
+                    <img src="12.jpg" alt="">
+                    <p>مقبرة كوم الشقافة </p>
+                </div>
+            </section>
+            <section>
+                <div class="ex-item">
+                    <img src="13_cleanup.jpg" alt="">
+                    <p>جبانة الشاطبي
+                    </p>
                 </div>
             </section>
             </section>
